@@ -1,13 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="63cf541b-268b-4c3a-9e89-f5154d7b61ea" name="Changes" comment="" />
+    <list default="true" id="63cf541b-268b-4c3a-9e89-f5154d7b61ea" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/S4-R02-2023_06_QuizzUp_joueur-sme.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fr.iut.montreuil.S4_R02_2023_06_QuizzUp_Joueur_sme.entites.dto/JoueurDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fr.iut.montreuil.S4_R02_2023_06_QuizzUp_Joueur_sme.entites.dto/Langue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/iut/montreuil/S4_R02_2023_06_QuizzUp_Joueur_sme/resources/questionsQuizz_V1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr.iut.montreuil.S4_R02_2023_06_QuizzUp_Joueur_sme.resources/questionsQuizz_V1.csv" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Enum" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -22,6 +43,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/fr/iut/montreuil/S4_R02_2023_06_QuizzUp_Joueur_sme/resources" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
@@ -30,6 +52,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/fr/iut/montreuil/S4_R02_2023_06_QuizzUp_Joueur_sme/resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\JAVA\S4-R02-2023_06_QuizzUp_joueur-sme\src\fr.iut.montreuil.S4_R02_2023_06_QuizzUp_Joueur_sme.resources" />
     </key>
   </component>
   <component name="RunManager">
@@ -57,5 +82,16 @@
       <updated>1675346312231</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
