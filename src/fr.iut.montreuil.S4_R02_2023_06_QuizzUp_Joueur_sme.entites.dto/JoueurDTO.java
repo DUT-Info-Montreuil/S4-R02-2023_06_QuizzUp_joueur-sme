@@ -8,16 +8,18 @@ public class JoueurDTO {
     private String pseudo;
     private int anneeNaissance;
     private ArrayList<String> centresInterets;
-    private Langue langue;
+    private String langue;
     private int nbPartie;
+    private int nbBonnesRep;
     private int moyenne;
 
-    public JoueurDTO(String prenom, String pseudo, int anneeNaissance, ArrayList<String> centresInterets, Langue langue) {
+    public JoueurDTO(String prenom, String pseudo, int anneeNaissance, ArrayList<String> centresInterets, String langue) {
         this.prenom = prenom;
         this.pseudo = pseudo;
         this.anneeNaissance = anneeNaissance;
         this.centresInterets = centresInterets;
         this.langue = langue;
+        this.nbBonnesRep = 0;
         this.nbPartie = 0;
         this.moyenne = 0;
     }
@@ -39,7 +41,7 @@ public class JoueurDTO {
         return centresInterets;
     }
 
-    public Langue getLangue() {
+    public String getLangue() {
         return langue;
     }
 
@@ -49,6 +51,10 @@ public class JoueurDTO {
 
     public int getMoyenne() {
         return moyenne;
+    }
+
+    public int getNbBonnesRep() {
+        return nbBonnesRep;
     }
 
     public void setPrenom(String prenom) {
@@ -63,7 +69,7 @@ public class JoueurDTO {
         this.anneeNaissance = anneeNaissance;
     }
 
-    public void setLangue(Langue langue) {
+    public void setLangue(String langue) {
         this.langue = langue;
     }
 
