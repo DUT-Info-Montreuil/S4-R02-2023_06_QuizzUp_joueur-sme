@@ -6,8 +6,8 @@ import java.util.ArrayList;
 
 public interface IServiceJoueur {
 
-    JoueurDTO ajouterJoueur();
-    JoueurDTO supprimerJoueur();
+    JoueurDTO ajouterJoueur(String prenom, String pseudo, int anneeNaissance, ArrayList<String> centresInterets, String langue);
+    JoueurDTO supprimerJoueur(JoueurDTO joueur);
     ArrayList<JoueurDTO> listerJoueur();
 
 }
