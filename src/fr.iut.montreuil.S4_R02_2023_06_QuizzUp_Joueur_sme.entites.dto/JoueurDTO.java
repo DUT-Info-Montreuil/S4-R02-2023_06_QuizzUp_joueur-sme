@@ -7,13 +7,13 @@ public class JoueurDTO {
     private String prenom;
     private String pseudo;
     private int anneeNaissance;
-    private ArrayList<String> centresInterets;
+    private String centresInterets;
     private String langue;
     private int nbPartie;
     private int nbBonnesRep;
     private int moyenne;
 
-    public JoueurDTO(String prenom, String pseudo, int anneeNaissance, ArrayList<String> centresInterets, String langue) {
+    public JoueurDTO(String prenom, String pseudo, int anneeNaissance, String centresInterets, String langue) {
         this.prenom = prenom;
         this.pseudo = pseudo;
         this.anneeNaissance = anneeNaissance;
@@ -37,7 +37,7 @@ public class JoueurDTO {
         return anneeNaissance;
     }
 
-    public ArrayList<String> getCentresInterets() {
+    public String getCentresInterets() {
         return centresInterets;
     }
 
@@ -55,6 +55,11 @@ public class JoueurDTO {
 
     public int getNbBonnesRep() {
         return nbBonnesRep;
+    }
+
+
+    public void setCentresInterets(String centresInterets) {
+        this.centresInterets = centresInterets;
     }
 
     public void setPrenom(String prenom) {
