@@ -1,6 +1,5 @@
-package fr.iut.montreuil.S4_R02_2023_06_QuizzUp_Joueur_sme.entites.dto;
+package fr.iut.montreuil.S4_R02_2023_06_QuizzUp_Joueur_sme.entities.dto;
 
-import java.util.ArrayList;
 
 public class JoueurDTO {
 
@@ -78,4 +77,17 @@ public class JoueurDTO {
         this.langue = langue;
     }
 
+    @Override
+    public String toString() {
+        return "JoueurDTO{" +
+                "prenom='" + prenom + '\'' +
+                ", pseudo='" + pseudo + '\'' +
+                ", anneeNaissance=" + anneeNaissance +
+                ", centresInterets='" + centresInterets + '\'' +
+                ", langue='" + langue + '\'' +
+                ", nbPartie=" + nbPartie +
+                ", nbBonnesRep=" + nbBonnesRep +
+                ", moyenne=" + moyenne +
+                '}';
+    }
 }

@@ -1,6 +1,6 @@
 package fr.iut.montreuil.S4_R02_2023_06_QuizzUp_Joueur_sme.modeles;
 
-import fr.iut.montreuil.S4_R02_2023_06_QuizzUp_Joueur_sme.entites.dto.JoueurDTO;
+import fr.iut.montreuil.S4_R02_2023_06_QuizzUp_Joueur_sme.entities.dto.JoueurDTO;
 
 import java.util.ArrayList;
 
