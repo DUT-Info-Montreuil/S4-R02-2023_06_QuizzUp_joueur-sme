@@ -31,8 +31,8 @@ public class ServiceJoueur implements IServiceJoueur {
     }
 
     @Override
-    public JoueurDTO supprimerJoueur(JoueurDTO joueur) {
-        Optional<JoueurDTO> j =joueurs.stream().filter(joueurDTO -> joueurDTO==joueur).findFirst();
+    public JoueurDTO supprimerJoueur(String pseudo) {
+        Optional<JoueurDTO> j =joueurs.stream().filter(joueurDTO -> joueurDTO.getPseudo().equals(pseudo)).findFirst();
         if(j.isPresent()) {
             joueurs.remove(j.get());
             return j.get();
