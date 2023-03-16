@@ -24,10 +24,15 @@ public class ServiceJoueur implements IServiceJoueur {
 
 
     @Override
-    public JoueurDTO ajouterJoueur(String prenom, String pseudo, int anneeNaissance, String centresInterets, String langue) {
-        JoueurDTO newJoueur = new JoueurDTO(prenom,pseudo,anneeNaissance,centresInterets,langue);
-        joueurs.add(newJoueur);
-        return newJoueur;
+    public JoueurDTO ajouterJoueur(String prenom, String pseudo, int anneeNaissance, String centresInterets, String langue) throws JoueurUniqueException {
+        if(!pseudoUnique(pseudo)){
+            throw new JoueurUniqueException();
+        }
+        else {
+            JoueurDTO newJoueur = new JoueurDTO(prenom, pseudo, anneeNaissance, centresInterets, langue);
+            joueurs.add(newJoueur);
+            return newJoueur;
+        }
     }
 
     @Override
@@ -46,7 +51,10 @@ public class ServiceJoueur implements IServiceJoueur {
     }
 
 
-
+    private boolean pseudoUnique(String s){
+        Optional<String> o = joueurs.stream().map(JoueurDTO::getPseudo).filter(x -> x.equals(s)).findAny();
+        return o.isPresent();
+    }
 
 
 }
