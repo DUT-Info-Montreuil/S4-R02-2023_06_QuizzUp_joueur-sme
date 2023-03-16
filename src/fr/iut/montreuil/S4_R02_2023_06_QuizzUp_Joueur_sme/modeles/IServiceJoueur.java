@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public interface IServiceJoueur {
 
     JoueurDTO ajouterJoueur(String prenom, String pseudo, int anneeNaissance, String centresInterets, String langue) throws JoueurUniqueException;
-    JoueurDTO supprimerJoueur(JoueurDTO joueur);
+    JoueurDTO supprimerJoueur(String pseudo);
     ArrayList<JoueurDTO> listerJoueur();
 
 }

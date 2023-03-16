@@ -1,6 +1,7 @@
 package fr.iut.montreuil.S4_R02_2023_06_QuizzUp_Joueur_sme.test.impl;
 
 import fr.iut.montreuil.S4_R02_2023_06_QuizzUp_Joueur_sme.entities.dto.JoueurDTO;
+import fr.iut.montreuil.S4_R02_2023_06_QuizzUp_Joueur_sme.impl.JoueurUniqueException;
 import fr.iut.montreuil.S4_R02_2023_06_QuizzUp_Joueur_sme.impl.ServiceJoueur;
 import org.junit.jupiter.api.Test;
 
@@ -9,12 +10,12 @@ import static org.junit.jupiter.api.Assertions.*;
 public class TestServiceJoueur {
 
 
-    ServiceJoueur service = new ServiceJoueur();
+    ServiceJoueur service = ServiceJoueur.getInstance();
     JoueurDTO joueur = new JoueurDTO("Bilel", "Bilel94z", 2004, "foot", "francais");
 
 
     @Test
-    public void testAjouterJoueur(){
+    public void testAjouterJoueur() throws JoueurUniqueException{
         service.ajouterJoueur("Bilel", "Bilel94z", 2004, "foot", "francais");
         assertEquals(1, service.listerJoueur().size());
         assertEquals(2004,service.listerJoueur().get(0).getAnneeNaissance());
@@ -25,7 +26,7 @@ public class TestServiceJoueur {
     }
 
     @Test
-    public void testSupprimerJoueur(){
+    public void testSupprimerJoueur() throws JoueurUniqueException{
         service.ajouterJoueur("Bilel", "Bilel94z", 2004, "foot", "francais");
         assertEquals(1,service.listerJoueur().size());
         service.supprimerJoueur("Bilel94z");
@@ -37,7 +38,7 @@ public class TestServiceJoueur {
     }
 
     @Test
-    public void testListerJoueur(){
+    public void testListerJoueur() throws JoueurUniqueException{
         service.ajouterJoueur("Bilel", "Bilel94z", 2004, "foot", "francais");
         service.ajouterJoueur("Ismail", "Ismail942", 2003, "sucre", "francais");
         assertEquals("Bilel94z",service.listerJoueur().get(0).getPseudo());
