@@ -1,6 +1,7 @@
 package fr.iut.montreuil.S4_R02_2023_06_QuizzUp_Joueur_sme.impl;
 
 import fr.iut.montreuil.S4_R02_2023_06_QuizzUp_Joueur_sme.entities.dto.JoueurDTO;
+import fr.iut.montreuil.S4_R02_2023_06_QuizzUp_Joueur_sme.entities.dto.LangueDTO;
 import fr.iut.montreuil.S4_R02_2023_06_QuizzUp_Joueur_sme.modeles.IServiceJoueur;
 
 import java.util.ArrayList;
@@ -24,7 +25,7 @@ public class ServiceJoueur implements IServiceJoueur {
 
 
     @Override
-    public JoueurDTO ajouterJoueur(String prenom, String pseudo, int anneeNaissance, String centresInterets, String langue) throws JoueurUniqueException {
+    public JoueurDTO ajouterJoueur(String prenom, String pseudo, int anneeNaissance, String centresInterets, LangueDTO langue) throws JoueurUniqueException {
         if(!pseudoUnique(pseudo)){
             throw new JoueurUniqueException();
         }
@@ -36,13 +37,15 @@ public class ServiceJoueur implements IServiceJoueur {
     }
 
     @Override
-    public JoueurDTO supprimerJoueur(String pseudo) {
+    public JoueurDTO supprimerJoueur(String pseudo) throws PseudoInconnuException {
         Optional<JoueurDTO> j =joueurs.stream().filter(joueurDTO -> joueurDTO.getPseudo().equals(pseudo)).findFirst();
         if(j.isPresent()) {
             joueurs.remove(j.get());
             return j.get();
+        }else{
+            throw new PseudoInconnuException();
         }
-        return null;
+
     }
 
     @Override

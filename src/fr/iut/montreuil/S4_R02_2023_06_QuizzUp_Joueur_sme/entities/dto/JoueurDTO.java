@@ -7,12 +7,12 @@ public class JoueurDTO {
     private String pseudo;
     private int anneeNaissance;
     private String centresInterets;
-    private String langue;
+    private LangueDTO langue;
     private int nbPartie;
     private int nbBonnesRep;
     private int moyenne;
 
-    public JoueurDTO(String prenom, String pseudo, int anneeNaissance, String centresInterets, String langue) {
+    public JoueurDTO(String prenom, String pseudo, int anneeNaissance, String centresInterets, LangueDTO langue) {
         this.prenom = prenom;
         this.pseudo = pseudo;
         this.anneeNaissance = anneeNaissance;
@@ -40,7 +40,7 @@ public class JoueurDTO {
         return centresInterets;
     }
 
-    public String getLangue() {
+    public LangueDTO getLangue() {
         return langue;
     }
 
@@ -73,7 +73,7 @@ public class JoueurDTO {
         this.anneeNaissance = anneeNaissance;
     }
 
-    public void setLangue(String langue) {
+    public void setLangue(LangueDTO langue) {
         this.langue = langue;
     }
 
