@@ -1,6 +1,8 @@
 package fr.iut.montreuil.S4_R02_2023_06_QuizzUp_Joueur_sme.entities.dto;
 
 
+import java.util.ArrayList;
+
 public class JoueurDTO {
 
     private String prenom;
@@ -8,9 +10,7 @@ public class JoueurDTO {
     private int anneeNaissance;
     private String centresInterets;
     private LangueDTO langue;
-    private int nbPartie;
-    private int nbBonnesRep;
-    private int moyenne;
+    private ArrayList<PartieDTO> parties;
 
     public JoueurDTO(String prenom, String pseudo, int anneeNaissance, String centresInterets, LangueDTO langue) {
         this.prenom = prenom;
@@ -18,9 +18,7 @@ public class JoueurDTO {
         this.anneeNaissance = anneeNaissance;
         this.centresInterets = centresInterets;
         this.langue = langue;
-        this.nbBonnesRep = 0;
-        this.nbPartie = 0;
-        this.moyenne = 0;
+        this.parties = new ArrayList<>();
     }
 
 
@@ -44,18 +42,14 @@ public class JoueurDTO {
         return langue;
     }
 
-    public int getNbPartie() {
-        return nbPartie;
+
+    public ArrayList<PartieDTO> getParties() {
+        return parties;
     }
 
-    public int getMoyenne() {
-        return moyenne;
+    public void addParties(PartieDTO partie) {
+        this.parties.add(partie);
     }
-
-    public int getNbBonnesRep() {
-        return nbBonnesRep;
-    }
-
 
     public void setCentresInterets(String centresInterets) {
         this.centresInterets = centresInterets;
@@ -77,6 +71,7 @@ public class JoueurDTO {
         this.langue = langue;
     }
 
+
     @Override
     public String toString() {
         return "JoueurDTO{" +
@@ -84,10 +79,7 @@ public class JoueurDTO {
                 ", pseudo='" + pseudo + '\'' +
                 ", anneeNaissance=" + anneeNaissance +
                 ", centresInterets='" + centresInterets + '\'' +
-                ", langue='" + langue + '\'' +
-                ", nbPartie=" + nbPartie +
-                ", nbBonnesRep=" + nbBonnesRep +
-                ", moyenne=" + moyenne +
+                ", langue=" + langue +
                 '}';
     }
 }
